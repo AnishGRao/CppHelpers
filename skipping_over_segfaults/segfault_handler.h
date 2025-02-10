@@ -2,6 +2,12 @@
 #include <csignal>
 #include <setjmp.h>
 #include <stdexcept>
+
+
+/**
+ * Please dont use this in actual release software. This is useful for operations that you know can and will
+ *  throw segfaults, and you want to write illustrative example programs to show users what *not* to do.
+ */
 namespace detail
 {
     void naive_sigsegv_handler(int)
